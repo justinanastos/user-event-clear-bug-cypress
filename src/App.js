@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  const [buttonClicked, setButtonClicked] = React.useState(false);
+  const [eventFired, setEventFired] = React.useState(false);
 
   return (
     <div className="App">
@@ -11,10 +11,10 @@ function App() {
         <input
           type="text"
           defaultValue="default content"
-          onChange={() => setButtonClicked(true)}
+          onChange={() => setEventFired(true)}
         />
       </label>
-      {buttonClicked && <div>button was clicked</div>}
+      {eventFired && <div>onChange event was fired</div>}
     </div>
   );
 }
